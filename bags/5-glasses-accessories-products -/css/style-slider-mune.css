@@ -1,0 +1,118 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	font-family: "Droid Arabic Kufi", "serif";
+}
+
+.side-bar{
+ background: rgba(0,0,0,0.65);
+ backdrop-filter: blur(15px);
+ width: 290px;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ right: -100%;
+ overflow-y: auto;
+ transition-property: left;
+ z-index: 200000000;
+transition: 0.6s ease;
+}
+
+.side-bar.active{
+ right: 0;
+}
+
+.side-bar .menu{
+ width: 90%;
+ margin: auto;
+ margin-top: 60px;
+}
+
+.side-bar .menu .item{
+ position: relative;
+ cursor: pointer;
+}
+
+.side-bar .menu .item a{
+ color: #FFB5B6;
+ font-size: 16px;
+ font-family:"Droid Arabic Kufi", "serif"; 
+ text-decoration: none;
+ display: block;
+ padding: 5px 30px;
+ line-height: 60px;
+ border-bottom:1px solid rgba(117,133,253,0.47);
+}
+
+.side-bar .menu .item a:hover{
+ background: rgba(150,57,255,0.24);
+ transition: 0.5s ease;
+}
+
+.side-bar .menu .item i{
+ float: left;
+}
+
+.side-bar .menu .item a .dropdown{
+ position: absolute;
+ right: 0;
+ margin: 20px;
+ transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+ background: rgba(255, 255, 255, 0.1);
+ display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+ padding-left: 80px;
+}
+
+.rotate{
+ transform: rotate(90deg);
+}
+
+.close-btn{
+ position: absolute;
+ color: #fff;
+ font-size: 25px;
+ right: 20;
+ margin: 15px;
+ cursor: pointer;
+}
+
+.menu-btn{
+ float: right;
+ font-size: 30px;
+ color:#000000;
+ margin-top: 6px;
+ margin-left: 30px;
+ cursor: pointer;
+ transition: all 0.4s ease;
+}
+.menu-btn:hover{color: rgba(255,76,79,1.00)}
+
+
+.main{
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 50px;
+}
+
+.main h1{
+ color: rgba(255, 255, 255, 0.8);
+ font-size: 60px;
+ text-align: center;
+ line-height: 80px;
+}
+
+@media (max-width: 900px){
+ .main h1{
+   font-size: 40px;
+   line-height: 60px;
+ }
+}
+                           
